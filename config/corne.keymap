@@ -59,8 +59,8 @@
 
             bindings = <
 &kp TAB           &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8         &kp N9         &kp N0           &kp BSPC
-&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp C_VOL_UP    &kp LEFT  &kp DOWN  &kp UP         &kp RIGHT      &trans           &kp DEL
-&kp LSHFT         &PC_Pass      &kp CAPS      &kp LC(C)     &kp LC(V)     &kp C_VOL_DN    &kp HOME  &kp END   &kp PAGE_UP    &kp PAGE_DOWN  &kp PRINTSCREEN  &kp ESC
+&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp C_VOL_UP    &kp LEFT  &kp DOWN  &kp UP         &kp RIGHT      &kp ESCAPE       &kp DEL
+&kp LSHFT         &PC_Pass      &trans        &trans        &kp CAPSLOCK  &kp C_VOL_DN    &kp HOME  &kp END   &kp PAGE_UP    &kp PAGE_DOWN  &kp PRINTSCREEN  &kp RIGHT_SHIFT
                                               &kp LGUI      &trans        &kp SPACE       &kp RET   &mo 3     &kp RIGHT_WIN
             >;
         };
@@ -73,19 +73,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL         &kp AT           &kp HASH    &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &kp NON_US_BSLH  &kp NON_US_HASH  &trans      &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans           &trans           &kp K_COPY  &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                             &kp LGUI    &mo 3     &kp SPACE    &kp RET    &trans     &kp RALT
+&kp TAB    &kp EXCL  &kp AT  &kp HASH    &kp DLLR  &kp PRCNT    &kp CARET        &kp AMPS         &kp ASTRK  &kp LPAR  &kp RPAR   &kp BSPC
+&kp LCTRL  &trans    &trans  &trans      &trans    &trans       &kp MINUS        &kp EQUAL        &kp LBKT   &kp RBKT  &kp BSLH   &kp SINGLE_QUOTE
+&kp LSHFT  &trans    &trans  &kp K_COPY  &trans    &trans       &kp NON_US_BSLH  &kp NON_US_HASH  &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSLASH
+                             &kp LGUI    &mo 3     &kp SPACE    &kp RET          &trans           &kp RALT
             >;
         };
 
         layer_3 {
             bindings = <
-&trans      &trans     &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-&bt BT_CLR  &trans     &trans     &trans  &trans  &trans    &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6
-&trans      &Key_Pass  &VPN_Pass  &trans  &trans  &trans    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-                                  &trans  &trans  &trans    &trans  &trans  &trans
+&kp F12  &kp F1     &kp F2     &kp F3  &kp F4  &kp F5        &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans   &trans     &trans     &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &Key_Pass  &VPN_Pass  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans   &trans
+                               &trans  &trans  &bt BT_CLR    &trans  &trans  &trans
             >;
         };
     };
