@@ -20,7 +20,7 @@
         Key_Pass: Key_Pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N) &kp N0 &kp V &kp I &kp N3 &kp M &kp B &kp R &kp N3 &kp ASTERISK &kp N2 &kp N9>;
+            bindings = <&kp LS(N) &kp N0 &kp V &kp I &kp N3 &kp M &kp B &kp R &kp N3 &kp RIGHT_BRACKET &kp N2 &kp N9>;
             label = "KEY_PASS";
         };
 
