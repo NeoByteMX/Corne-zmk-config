@@ -24,13 +24,6 @@
             label = "KEY_PASS";
         };
 
-        work: new_password {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp N6 &kp U &kp E &kp LS(F) &kp DLLR &kp LS(T) &kp POUND &kp N9 &kp J &kp LS(G) &kp LS(M) &kp O &kp LS(Z) &kp LS(W) &kp N7 &kp G>;
-            label = "NEW_PASSWORD";
-        };
-
         lectura: lectura {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -45,11 +38,11 @@
             label = "ESCRITURA";
         };
 
-        New_work: New_work {
+        work: work {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(C) &kp D &kp PRCNT &kp F &kp N6 &kp N8 &kp N3 &kp J &kp LS(X) &kp K &kp N4 &kp LS(R) &kp A &kp LS(C) &kp A &kp U>;
-            label = "NEW_WORK";
+            bindings = <&none &kp N &kp F &kp I &kp LS(H) &kp LS(T) &kp N7 &kp LS(K) &kp LS(A) &kp LS(S) &kp D &kp AT &kp N2 &kp X &kp K &kp DLLR &kp H>;
+            label = "WORK";
         };
     };
 
@@ -81,7 +74,7 @@
             bindings = <
 &none  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6     &kp N7    &kp N8     &kp N9         &kp N0           &kp BSPC
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp C_VOL_UP    &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT      &kp ESCAPE       &kp DEL
-&none  &PC           &Key          &New_work     &kp CAPS      &kp C_VOL_DN    &kp HOME   &kp END   &kp PG_UP  &kp PAGE_DOWN  &kp PRINTSCREEN  &mt RIGHT_SHIFT ENTER
+&none  &PC           &Key          &none         &kp CAPS      &kp C_VOL_DN    &kp HOME   &kp END   &kp PG_UP  &kp PAGE_DOWN  &kp PRINTSCREEN  &mt RIGHT_SHIFT ENTER
                                    &none         &none         &kp SPACE       &kp SPACE  &mo 3     &none
             >;
         };
