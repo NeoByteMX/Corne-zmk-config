@@ -41,7 +41,7 @@
         work: work {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp N &kp F &kp I &kp LS(H) &kp LS(T) &kp N7 &kp LS(K) &kp LS(A) &kp LS(S) &kp D &kp AT &kp N2 &kp X &kp K &kp DLLR &kp H>;
+            bindings = <&kp S &kp LS(E) &kp LS(T) &kp S &kp G &kp Z &kp LS(S) &kp LS(E) &kp D &kp LS(S) &kp A &kp LS(S) &kp N2 &kp LS(S) &kp LS(F) &kp N4>;
             label = "WORK";
         };
     };
