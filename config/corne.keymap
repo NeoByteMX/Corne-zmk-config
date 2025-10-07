@@ -44,6 +44,13 @@
             bindings = <&kp S &kp LS(E) &kp LS(T) &kp S &kp G &kp Z &kp LS(S) &kp LS(E) &kp D &kp LS(S) &kp A &kp LS(S) &kp N2 &kp LS(S) &kp LS(F) &kp N4>;
             label = "WORK";
         };
+
+        new_work: new_work {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(V) &kp N7 &kp U &kp E &kp B &kp B &kp DLLR &kp LS(V) &kp LS(Q) &kp LS(M) &kp U &kp LS(U) &kp LS(B) &kp N9 &kp LS(X) &kp LS(Q)>;
+            label = "NEW_WORK";
+        };
     };
 
     keymap {
@@ -72,10 +79,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none             &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6     &kp N7    &kp N8        &kp N9         &kp N0           &kp BSPC
-&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp C_VOL_UP    &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT      &kp ESCAPE       &kp DEL
-&kp LEFT_SHIFT    &PC           &Key          &none         &kp CAPS      &kp C_VOL_DN    &kp HOME   &kp END   &kp PG_UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &kp ENTER
-                                              &none         &none         &kp SPACE       &kp ENTER  &mo 3     &kp LEFT_WIN
+&none             &kp N1        &kp N2        &kp N3        &kp N4        &kp N5       &kp N6     &kp N7    &kp N8        &kp N9         &kp N0           &kp BSPC
+&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none        &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT      &kp ESCAPE       &kp DEL
+&kp LEFT_SHIFT    &PC           &Key          &new_work     &kp CAPS      &none        &kp HOME   &kp END   &kp PG_UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &kp ENTER
+                                              &none         &none         &kp SPACE    &kp ENTER  &mo 3     &kp LEFT_WIN
             >;
         };
 
