@@ -51,6 +51,48 @@
             bindings = <&none &kp LS(V) &kp N7 &kp U &kp E &kp B &kp B &kp DLLR &kp LS(V) &kp LS(Q) &kp LS(M) &kp U &kp LS(U) &kp LS(B) &kp N9 &kp LS(X) &kp LS(Q)>;
             label = "NEW_WORK";
         };
+
+        Title_Bold: Title_Bold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp POUND &kp POUND &kp POUND &kp SPACE &kp LS(RBKT) &kp LS(RBKT) &kp LS(T) &kp I &kp T &kp L &kp E &kp LS(RBKT) &kp LS(RBKT)>;
+            label = "TITLE_BOLD";
+        };
+
+        Code_Bash: Code_Bash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp RA(NUHS) &kp RA(NUHS) &kp RA(NUHS) &kp RA(NUHS) &kp BACKSPACE &kp B &kp A &kp S &kp H &kp ENTER>;
+            label = "CODE_BASH";
+        };
+
+        nmap: nmap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N &kp M &kp A &kp P &kp SPACE &kp FSLH &kp S &kp LS(C) &kp SPACE &kp FSLH &kp S &kp LS(V) &kp SPACE &kp FSLH &kp P &kp FSLH &kp SPACE &kp FSLH &kp O &kp LS(N) &kp SPACE &kp N &kp M &kp A &kp P &kp DOT &kp T &kp X &kp T &kp SPACE>;
+            label = "NMAP";
+        };
+
+        checklist: checklist {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp FSLH &kp SPACE &kp DQT &kp SPACE &kp PIPE>;
+            label = "CHECKLIST";
+        };
+
+        python_server: python_server {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp P &kp Y &kp T &kp H &kp O &kp N &kp N3 &kp SPACE &kp FSLH &kp M &kp SPACE &kp H &kp T &kp T &kp P &kp DOT &kp S &kp E &kp R &kp V &kp E &kp R &kp SPACE &kp N8 &kp N0 &kp N8 &kp N0>;
+            label = "PYTHON_SERVER";
+        };
+
+        info_warning: info_warning {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(NON_US_BSLH) &kp SPACE &kp LS(SINGLE_QUOTE) &kp EXCL &kp W &kp A &kp R &kp N &kp I &kp N &kp G &kp RIGHT &kp ENTER>;
+            label = "INFO_WARNING";
+        };
     };
 
     keymap {
@@ -79,10 +121,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none             &kp N1        &kp N2        &kp N3        &kp N4        &kp N5       &kp N6     &kp N7    &kp N8        &kp N9         &kp N0           &kp BSPC
-&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none        &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT      &kp ESCAPE       &kp DEL
-&kp LEFT_SHIFT    &PC           &Key          &new_work     &kp CAPS      &none        &kp HOME   &kp END   &kp PG_UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &kp ENTER
-                                              &none         &none         &kp SPACE    &kp ENTER  &mo 3     &kp LEFT_WIN
+&none             &kp N1        &kp N2        &kp N3        &kp N4  &kp N5       &kp N6     &kp N7    &kp N8        &kp N9         &kp N0           &kp BSPC
+&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &none        &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT      &kp ESCAPE       &kp DEL
+&kp LEFT_SHIFT    &PC           &Key          &new_work     &trans  &none        &kp HOME   &kp END   &kp PG_UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &kp ENTER
+                                              &none         &none   &kp SPACE    &kp ENTER  &mo 3     &kp LEFT_WIN
             >;
         };
 
@@ -94,10 +136,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none           &kp EXCL   &kp AT    &kp HASH       &kp DLLR  &kp PRCNT    &kp CARET        &kp AMPS         &kp ASTRK  &kp LPAR  &kp RPAR   &kp BSPC
-&none           &kp GRAVE  &kp Q     &none          &none     &none        &kp MINUS        &kp EQUAL        &kp LBKT   &kp RBKT  &kp BSLH   &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &work      &lectura  &escritura     &none     &none        &kp NON_US_BSLH  &kp NON_US_HASH  &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSLASH
-                                     &kp RIGHT_ALT  &mo 3     &kp SPACE    &kp SPACE        &none            &none
+&none           &kp EXCL    &kp AT       &kp HASH       &kp DLLR    &kp PRCNT         &kp CARET        &kp AMPS         &kp ASTRK  &kp LPAR  &kp RPAR   &kp BSPC
+&none           &kp GRAVE   &kp Q        &trans         &nmap       &python_server    &kp MINUS        &kp EQUAL        &kp LBKT   &kp RBKT  &kp BSLH   &kp SINGLE_QUOTE
+&kp LEFT_SHIFT  &Code_Bash  &Title_Bold  &info_warning  &checklist  &trans            &kp NON_US_BSLH  &kp NON_US_HASH  &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSLASH
+                                         &kp RIGHT_ALT  &mo 3       &kp SPACE         &kp SPACE        &none            &none
             >;
         };
 
