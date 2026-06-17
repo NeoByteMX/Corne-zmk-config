@@ -86,13 +86,6 @@
             bindings = <&none &kp P &kp Y &kp T &kp H &kp O &kp N &kp N3 &kp SPACE &kp FSLH &kp M &kp SPACE &kp H &kp T &kp T &kp P &kp DOT &kp S &kp E &kp R &kp V &kp E &kp R &kp SPACE &kp N8 &kp N0 &kp N8 &kp N0>;
             label = "PYTHON_SERVER";
         };
-
-        info_warning: info_warning {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(NON_US_BSLH) &kp SPACE &kp LS(SINGLE_QUOTE) &kp EXCL &kp W &kp A &kp R &kp N &kp I &kp N &kp G &kp RIGHT &kp ENTER>;
-            label = "INFO_WARNING";
-        };
     };
 
     keymap {
@@ -106,10 +99,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &mt LEFT_SHIFT ENTER
-                         &kp LEFT_ALT  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp LEFT_WIN
+&kp TAB    &kp APOS  &kp COMMA  &kp DOT       &kp P  &kp Y        &kp F      &kp G  &kp C         &kp R  &kp L  &kp BSPC
+&kp LCTRL  &kp A     &kp O      &kp E         &kp U  &kp I        &kp D      &kp H  &kp T         &kp N  &kp S  &kp MINUS
+&kp LSHFT  &kp SEMI  &kp Q      &kp J         &kp K  &kp X        &kp B      &kp M  &kp W         &kp V  &kp Z  &mt LEFT_SHIFT ENTER
+                                &kp LEFT_ALT  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp LEFT_WIN
             >;
         };
 
@@ -121,10 +114,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none             &kp N1        &kp N2        &kp N3        &kp N4  &kp N5               &kp N6     &kp N7    &kp N8        &kp N9         &kp N0           &kp BSPC
-&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &kp C_VOLUME_UP      &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT      &kp ESCAPE       &kp DEL
-&kp LEFT_SHIFT    &PC           &Key          &new_work     &trans  &kp C_VOLUME_DOWN    &kp HOME   &kp END   &kp PG_UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &kp ENTER
-                                              &none         &none   &kp SPACE            &kp ENTER  &mo 3     &kp LEFT_WIN
+&none             &kp N1        &kp N2        &kp N3        &kp N4     &kp N5               &kp N6     &kp N7    &kp N8        &kp N9         &kp N0           &kp BSPC
+&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LC(C)  &kp C_VOLUME_UP      &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT      &kp ESCAPE       &kp DEL
+&kp LEFT_SHIFT    &PC           &Key          &new_work     &kp LC(V)  &kp C_VOLUME_DOWN    &kp HOME   &kp END   &kp PG_UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &kp ENTER
+                                              &none         &none      &kp SPACE            &kp ENTER  &mo 3     &kp LEFT_WIN
             >;
         };
 
@@ -137,8 +130,8 @@
 
             bindings = <
 &none           &kp EXCL    &kp AT       &kp HASH       &kp DLLR    &kp PRCNT         &kp CARET        &kp AMPS         &kp ASTRK  &kp LPAR  &kp RPAR   &kp BSPC
-&none           &kp GRAVE   &kp Q        &trans         &nmap       &python_server    &kp MINUS        &kp EQUAL        &kp LBKT   &kp RBKT  &kp BSLH   &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &Code_Bash  &Title_Bold  &info_warning  &checklist  &trans            &kp NON_US_BSLH  &kp NON_US_HASH  &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSLASH
+&none           &kp GRAVE   &kp Q        &trans         &trans      &trans            &kp MINUS        &kp EQUAL        &kp LBKT   &kp RBKT  &kp BSLH   &kp SINGLE_QUOTE
+&kp LEFT_SHIFT  &Code_Bash  &Title_Bold  &nmap          &checklist  &python_server    &kp NON_US_BSLH  &kp NON_US_HASH  &kp COMMA  &kp DOT   &kp SLASH  &kp BACKSLASH
                                          &kp RIGHT_ALT  &mo 3       &kp SPACE         &kp SPACE        &none            &none
             >;
         };
